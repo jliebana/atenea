@@ -1,0 +1,77 @@
+Atenea
+======
+
+Versión: 0.0.1
+
+Descripción: Lector simple de RSS con filtrado por palabras que gustan
+
+Etapas:
+
+1. Lectura de los feeds del fichero proporcionado por args
+
+2. Filtrado de palabras básico (preposiciones, [conjunciones, artículos])
+
+3. Calculo simple de cuanto gusta el artículo:
+
+a. FGusto = Total palabras gustadas encontradas / total de palabras articulo
+
+4. Ordenamiento en función de “gusto” (de mayor a menor)
+
+5. Imprimir artículos a HTML
+
+6. Interfaz gráfica con webview de dicho html
+
+7. Realimentación de palabras que gustan
+
+Detalles encontrados:
+
+- Necesidad de definir un archivo común en lugar de usar args->Archivo de configuración vs rutas establecidas relativas.
+
+- Trabajar con palabras en lugar de sobre el texto -> Extracción de palabras (posiblemente complicaciones con los puntos, comas etc). Definir que es una palabra.
+
+- Faltan etapas:
+
+o   (2)Dividir filtrado HTML, pasar a palabras, eliminar palabras
+
+o   (6)Almacenamiento de las palabras que han gustado
+
+-  Para la versión 0.0.1 -> Lista de palabras cargada de fichero
+
+- Tomar decisión de cómo tratar codificaciones ( “&…;” ) y acentos.
+
+Bugs detectados:
+
+Navegador demasiado pequeño en Unix
+
+Error en MacOS al arrancar
+
+Comentarios destacados:
+
+- Mostrar la fuente del artículo
+
+- Artículos ya leídos
+
+ 
+ ----- 
+
+Versión 0.0.2
+
+Mejoras:
+
+- Solución a los problemas de interfaz en Unix
+
+- Solución a los problemas de Mac -> Temporalmente “-XstartOnFirstThread”-> Pendiente mejora
+
+- Mostar barra de progreso en la carga de archivos  + feeds.
+
+- Eliminación de archivos HTML de artículos
+
+- Mostrar fuente del artículo y fecha.
+
+- Diseño CSS de la página a mostrar
+
+Fixs:
+
+- Si hay un feed no válido/no accesible, se continua con la descarga del resto
+
+ 
